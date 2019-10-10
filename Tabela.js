@@ -58,17 +58,11 @@
         btnCadastrar.addEventListener ("click", function(){
 
             let inputMatricula = document.querySelector("#matricula");
-
             let inputNome = document.querySelector("#nome");
-
             let inputSalario = document.querySelector("#salario");
-
             let inputAumento = document.querySelector("#porcAumento");
-
             let inputImposto = document.querySelector("#porcImposto");
-
             let table = document.querySelector("#tabelaFuncionarios");
-
             let tr = document.createElement("tr");
             let tdMatricula = document.createElement("td");
             let tdNome = document.createElement("td");
@@ -76,49 +70,32 @@
             let tdAumento = document.createElement("td");
             let tdImposto = document.createElement("td");
             let tdNovoSalario = document.createElement("td");
+
             tr.classList = "funcionario";
             table.appendChild(tr);
 
-
             tdMatricula.textContent = inputMatricula.value;
-
             tdMatricula.classList = "info-mat";
-
             tr.appendChild(tdMatricula);
 
-
             tdNome.textContent = inputNome.value;
-
             tdNome.classList = "info-nome";
-
             tr.appendChild(tdNome);
 
-
             tdSalario.textContent = inputSalario.value;
-
             tdSalario.classList = "info-salario";
-
             tr.appendChild(tdSalario);
 
-
             tdAumento.textContent = inputAumento.value;
-
             tdAumento.classList = "info-aumento";
-
             tr.appendChild(tdAumento);
 
-
             tdImposto.textContent = inputImposto.value;
-
-            tdImposto.classList = "info-imposto";
-            
+            tdImposto.classList = "info-imposto";  
             tr.appendChild(tdImposto);
 
-
             tdNovoSalario.textContent = parseFloat(tdSalario.textContent) + (parseFloat(tdSalario.textContent)*parseFloat(tdAumento.textContent)/100) - (parseFloat(tdSalario.textContent)*parseFloat(tdImposto.textContent)/100);
-
             tdNovoSalario.classList = "info-novoSalario";
-
             tr.appendChild(tdNovoSalario);
 
             clearInput("#matricula");
@@ -127,6 +104,7 @@
             clearInput("#porcAumento");
             clearInput("#porcImposto");
         })
+        
         let funcionarios = document.querySelectorAll(".funcionario");
         console.log(funcionarios.length);
         for(let funcionario of funcionarios){
