@@ -55,13 +55,6 @@
     </div>
     <button id="btnCadastrar">Cadastrar</button>
     <script>
-
-        function clearInput(id){
-            let inputClear = document.querySelector(id);
-            inputClear.value = '';
-
-        }
-
         btnCadastrar.addEventListener ("click", function(){
 
             let inputMatricula = document.querySelector("#matricula");
